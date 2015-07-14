@@ -13,5 +13,12 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
+ *= depend_on_asset "MA1663_1 (1).jpg"
 
  */
+
+body {
+background-image: asset-data-url('Manchester.jpg');
+background-repeat: no-repeat;
+background-size: 100%;
+}

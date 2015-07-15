@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<div class="page-wrap">
 <html>
 <head>
   <title>ManchesterExplorer</title>
@@ -6,7 +6,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
@@ -34,7 +34,10 @@
 
   <%= yield %>
 
+  <%#= debug(params) if Rails.env.development? %>
+  <%= render "layouts/footer" %>
   <%= javascript_include_tag 'application' %>
-  <%= yield :extra_footer %>
+
 </body>
 </html>
+</div>

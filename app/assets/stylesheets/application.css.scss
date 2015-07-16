@@ -18,7 +18,7 @@
  */
 
 body {
-  background-image: asset-data-url('Manchester.jpg');
+  background-image: asset-data-url('ManchesterNew1.jpg');
   background-repeat: no-repeat;
   background-position: top, center;
   background-size: 96.8%;
@@ -26,6 +26,18 @@ body {
 
 body {
   background-color: #FFFFFF
+}
+
+.transparent-container {
+  background:rgba(0,0,0,0.4);
+}
+
+.title-text {
+  color: #FFFFFF
+}
+
+h8 {
+    font-size: 70%;
 }
 
 * {
@@ -37,12 +49,16 @@ html, body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -175px;
+  margin-bottom: -215px;
 }
 .page-wrap:after {
   content: "";
   display: block;
 }
 .site-footer, .page-wrap:after {
-  height: 175px;
+  height: 215px;
+  bottom: 0;
+}
+.site-footer {
+  background: #66FFCC;
 }

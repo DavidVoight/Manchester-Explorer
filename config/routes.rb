@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   resources :portfolios do
     resources :stocks
   end
+
+  resources :investmentphilosophy
+  resources :managementbios
+
 end

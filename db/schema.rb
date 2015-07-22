@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717210738) do
+ActiveRecord::Schema.define(version: 20150721183455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bios", force: :cascade do |t|
+    t.string "name",        null: false
+    t.string "description", null: false
+  end
 
   create_table "investments", force: :cascade do |t|
     t.integer "portfolio_id", null: false

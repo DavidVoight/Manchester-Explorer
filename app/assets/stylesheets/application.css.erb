@@ -44,18 +44,51 @@ html, body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -200px;
+  margin-bottom: -185px;
 }
 .page-wrap:after {
   content: "";
   display: block;
 }
 .site-footer, .page-wrap:after {
-  height: 200px;
+  height: 185px;
   bottom: 0;
 }
 
 .site-footer {
-  background: #33CCFF;
+  background: #2EB8E6;
   opacity: .65;
 }
+
+.waterMark {
+background-color:white;
+float: right;
+opacity: 0.60;
+position: absolute;
+width: 60%;
+z-index: 999;
+}
+
+.gradient{
+        /* webkit example */
+        background: -webkit-gradient(
+          linear, center center, right center, from(rgba(255, 255, 255, 1.0)),
+          to(rgba(255, 255, 255, 0))
+        );
+
+        /* mozilla example - FF3.6+ */
+        background: -moz-linear-gradient(
+          left center,
+          rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%
+        );
+
+        /* IE 5.5 - 7 */
+        filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=1, startColor=0, endColorStr=#FFFFFF
+        );
+
+        /* IE8 uses -ms-filter for whatever reason... */
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=1, startColor=0, endColoStr=#FFFFFF
+        );
+    }

@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :portfolios do
-    resources :stocks
+    resources :investments
+  end
+
+  resources :users do
+    resources :notes
   end
 
   resources :investmentphilosophy
   resources :bios
+  resources :users
 
 end

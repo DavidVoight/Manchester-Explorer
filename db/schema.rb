@@ -23,21 +23,21 @@ ActiveRecord::Schema.define(version: 20150721183455) do
 
   create_table "investments", force: :cascade do |t|
     t.integer "portfolio_id", null: false
-    t.integer "note_id",      null: false
-    t.string  "stock_ticker", null: false
+    t.string  "ticker",       null: false
   end
 
   create_table "notes", force: :cascade do |t|
-    t.integer  "stock_id",    null: false
+    t.integer  "user_id",     null: false
     t.string   "title",       null: false
+    t.string   "ticker"
     t.string   "description", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "portfolios", force: :cascade do |t|
-    t.integer "user_id",  null: false
-    t.integer "stock_id", null: false
+    t.integer "user_id", null: false
+    t.integer "name",    null: false
   end
 
   create_table "users", force: :cascade do |t|

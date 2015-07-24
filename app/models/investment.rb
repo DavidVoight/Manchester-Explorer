@@ -1,7 +1,7 @@
 class Investment < ActiveRecord::Base
   belongs_to :portfolio
-  belongs_to :note
+  has_many :notes
 
-  validates :porfolio, presence: true
-  validates :note, presence: true
+  validates :portfolio_id, presence: true
+  validates :ticker, presence: true
 end

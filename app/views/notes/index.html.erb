@@ -1,0 +1,24 @@
+<div class="container" div="" style="background: url('<%= asset_path("maxresdefault.jpg") %>') repeat scroll 0% 0% / cover ; height:500px; margin-left: 20px; margin-right: 20px;">
+  <div class="transparent-container">
+    <div class="title-text">
+      <div class="row">
+        <% if user_signed_in? %>
+          <% @notes.each do |note| %>
+            <li><%= note.created_at %></li>
+            <li><%= note.ticker %></li>
+            <li><%= note.title %></li>
+            <li><%= note.description %></li>
+            <hr>
+          <% end %>
+        <% end %>
+      </div>
+
+        <p width="100%" align="right">
+        <iframe width="500" height="390" scrolling="no" frameborder="0" style="border:none;" src="http://widgets.freestockcharts.com/WidgetServer/InteractiveChartWidget.aspx?guid=undefined&w=500&h=390"></iframe>
+        </p>
+
+<!-- Start FreeStockCharts.com Chart Widget -->
+<!-- End FreeStockCharts.com Chart Widget -->
+    </div>
+  </div>
+</div>

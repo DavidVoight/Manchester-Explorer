@@ -1,0 +1,23 @@
+<div class="container" div="" style="background: url('<%= asset_path("maxresdefault.jpg") %>') repeat scroll 0% 0% / cover ; height:500px; margin-left: 20px; margin-right: 20px;">
+  <div class="transparent-container">
+    <div class='row'>
+      <div class="large-8 columns">
+        <%= form_for @note, url: { action: "edit" } do |f| %>
+          <h1 class='title-text'>Edit Note</h1>
+
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+
+          <%= f.label :ticker %>
+          <%= f.text_field :ticker %>
+
+          <%= f.label :description %>
+          <%= f.text_area :description %>
+
+          <%= f.submit "Edit" %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

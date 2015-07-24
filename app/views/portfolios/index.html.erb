@@ -1,0 +1,19 @@
+<div class="container" div="" style="background: url('<%= asset_path("maxresdefault.jpg") %>') repeat scroll 0% 0% / cover ; height:500px; margin-left: 20px; margin-right: 20px;">
+  <div class="transparent-container">
+
+    <% Portfolio::PERFORMANCE.each do |key,value| %>
+      <%= value %>
+    <% end %>
+
+    <br>
+
+    <%= Portfolio::PERFORMANCE[:last_3_months] %>
+
+    <br>
+
+    <%= Portfolio::PERFORMANCETEST[:last_3_months][:explorer] %>
+
+
+
+  </div>
+</div>

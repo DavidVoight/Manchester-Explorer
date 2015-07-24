@@ -8,21 +8,25 @@
 <body>
 
   <nav class="top-bar">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">Home</a></h1>
-      </li>
+    <ul class="title-area left">
+      <li class="name"><h1><a href="/">Home</a></h1></li>
     </ul>
 
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
           <li><%= link_to 'Investor Login', new_user_session_path %></li>
         <%- end -%>
       </ul>
     </section>
+
+    <% if current_user %>
+      <div class="left notes-link">
+        <li><%= link_to 'Notes', user_notes_path(current_user) %></li>
+      </div>
+    <% end %>
   </nav>
 
   <%- flash.each do |key, value| -%>
@@ -31,7 +35,9 @@
     </div>
   <%- end -%>
 
-  <%= yield %>
+  <div class="container"
+    <%= yield %>
+  </div>
 
   <%#= debug(params) if Rails.env.development? %>
   <div=class"clear"></div>

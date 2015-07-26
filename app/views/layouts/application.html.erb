@@ -24,7 +24,9 @@
 
     <% if current_user %>
       <div class="left notes-link">
-        <li><%= link_to 'Notes', user_notes_path(current_user) %></li>
+        <li><%= link_to 'Notes', user_notes_path(current_user)%></li></div>
+        <div class="left notes-link">
+        <li style="margin-left: 15px"><%= link_to 'Portfolio', portfolio_investments_path(current_user)%></li>
       </div>
     <% end %>
   </nav>

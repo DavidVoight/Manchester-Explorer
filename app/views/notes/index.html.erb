@@ -1,24 +1,29 @@
-<div class="container" div="" style="background: url('<%= asset_path("maxresdefault.jpg") %>') repeat scroll 0% 0% / cover ; height:500px; margin-left: 20px; margin-right: 20px;">
+<div class="table">
+<div class="container" div="" style="background: url('<%= asset_path("notepad10.jpg") %>') repeat scroll 0% 0% / cover ; height:525px; margin-left: 20px; margin-right: 20px; background-attachment: fixed; overflow: scroll">
+  <div class="small-7 columns">
   <div class="transparent-container">
     <div class="title-text">
       <div class="row">
+        <ul class="notes-link">
         <% if user_signed_in? %>
           <% @notes.each do |note| %>
-            <li><%= note.created_at %></li>
-            <li><%= note.ticker %></li>
-            <li><%= note.title %></li>
-            <li><%= note.description %></li>
+            <li style="font-size: 80%"><%= note.created_at %></li>
+            <li style="font-size: 90%">Ticker Symbol: <%= note.ticker %></li>
+            <li style="font-size: 90%">Title: <%= note.title %></li>
+            <li style="font-size: 90%"><%= note.description %></li>
             <hr>
           <% end %>
         <% end %>
+      </ul>
       </div>
-
-        <p width="100%" align="right">
-        <iframe width="500" height="390" scrolling="no" frameborder="0" style="border:none;" src="http://widgets.freestockcharts.com/WidgetServer/InteractiveChartWidget.aspx?guid=undefined&w=500&h=390"></iframe>
-        </p>
-
-<!-- Start FreeStockCharts.com Chart Widget -->
-<!-- End FreeStockCharts.com Chart Widget -->
     </div>
   </div>
-</div>
+<!-- Start FreeStockCharts.com Chart Widget -->
+  <div=class"clear"></div>
+      <div width="100%" align="right">
+        <ul class="button-group radius">
+          <li><a href="/users/:id/notes/new" class="button" style="border-left-style: solid; margin-right: 190px; margin-top: 15px; padding-left: 32px;">Create New Note</a></li>
+              <iframe width="530" height="450" scrolling="no" frameborder="0" style="border:none; margin-top: 0px" src="http://widgets.freestockcharts.com/WidgetServer/InteractiveChartWidget.aspx?guid=undefined&w=500&h=390"></iframe>
+</ul>
+      </div>
+<!-- End FreeStockCharts.com Chart Widget -->

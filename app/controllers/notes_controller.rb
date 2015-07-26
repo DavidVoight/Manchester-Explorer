@@ -14,7 +14,7 @@ class NotesController < ApplicationController
     @note.user_id = current_user.id
 
     if @note.save
-      flash[:notice] = "Note created."
+      flash[:notice] = ""
       redirect_to user_notes_path(current_user)
     else
       flash[:notice] = @note.errors.full_messages.join(" ")
